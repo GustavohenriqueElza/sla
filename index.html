@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards de Estudo - Cronologia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f1e1;
+            color: #3b312f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #5d473a;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #857a68;
+        }
+
+        .flashcards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .flashcard {
+            background-color: #d3c4a6;
+            border: 2px solid #8a7154;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .flashcard .question {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .flashcard .answer {
+            font-size: 1rem;
+            color: #494035;
+            display: none;
+            margin-top: 10px;
+        }
+
+        .reveal-btn {
+            background-color: #8a7154;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .reveal-btn:hover {
+            background-color: #705942;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #857a68;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flashcards de Estudo - Cronologia</h1>
+        <p>Da Pré-História à Era Digital</p>
+    </header>
+
+    <div class="flashcards">
+        <div class="flashcard">
+            <div class="question">
+                <p>Qual é o período mais antigo conhecido da história humana?</p>
+            </div>
+            <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
+            <div class="answer">
+                <p>Era Paleolítica (Idade da Pedra)</p>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">
+                <p>Quando começou a Idade do Bronze?</p>
+            </div>
+            <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
+            <div class="answer">
+                <p>Por volta de 3300 a.C.</p>
+            </div>
+        </div>
+
+        <div class="flashcard">
+            <div class="question">
+                <p>Qual invenção marcou o início da Revolução Industrial?</p>
+            </div>
+            <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
+            <div class="answer">
+                <p>Máquina a vapor (década de 1760)</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Flashcards de Estudo - Cronologia</p>
+    </footer>
+
+    <script>
+        function toggleAnswer(button) {
+            const answer = button.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = "Revelar Resposta";
+            } else {
+                answer.style.display = "block";
+                button.textContent = "Esconder Resposta";
+            }
+        }
+    </script>
+</body>
+</html>
