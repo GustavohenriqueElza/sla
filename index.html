@@ -37,17 +37,25 @@
             color: #857a68;
         }
 
+        .flashcards-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            gap: 20px;
+        }
+
         .flashcards {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            flex: 1;
         }
 
         .flashcard {
             background-color: #d3c4a6;
             border: 2px solid #8a7154;
             padding: 20px;
-            width: 300px;
             border-radius: 10px;
             box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
         }
@@ -91,34 +99,68 @@
         <p>Da Pré-História à Era Digital</p>
     </header>
 
-    <div class="flashcards">
-        <div class="flashcard">
-            <div class="question">
-                <p>Qual é o período mais antigo conhecido da história humana?</p>
+    <div class="flashcards-container">
+        <div class="flashcards">
+            <div class="flashcard">
+                <div class="question">
+                    <p>Qual é o período mais antigo conhecido da história humana?</p>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
+                <div class="answer">
+                    <p>Era Paleolítica (Idade da Pedra)</p>
+                </div>
             </div>
-            <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
-            <div class="answer">
-                <p>Era Paleolítica (Idade da Pedra)</p>
+
+            <div class="flashcard">
+                <div class="question">
+                    <p>Quando começou a Idade do Bronze?</p>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
+                <div class="answer">
+                    <p>Por volta de 3300 a.C.</p>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="question">
+                    <p>Qual invenção marcou o início da Revolução Industrial?</p>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
+                <div class="answer">
+                    <p>Máquina a vapor (década de 1760)</p>
+                </div>
             </div>
         </div>
 
-        <div class="flashcard">
-            <div class="question">
-                <p>Quando começou a Idade do Bronze?</p>
+        <div class="flashcards">
+            <div class="flashcard">
+                <div class="question">
+                    <p>Quando foi a invenção da imprensa por Gutenberg?</p>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
+                <div class="answer">
+                    <p>Por volta de 1440</p>
+                </div>
             </div>
-            <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
-            <div class="answer">
-                <p>Por volta de 3300 a.C.</p>
-            </div>
-        </div>
 
-        <div class="flashcard">
-            <div class="question">
-                <p>Qual invenção marcou o início da Revolução Industrial?</p>
+            <div class="flashcard">
+                <div class="question">
+                    <p>Qual foi o principal avanço tecnológico do século XX?</p>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
+                <div class="answer">
+                    <p>Desenvolvimento da informática e computadores</p>
+                </div>
             </div>
-            <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
-            <div class="answer">
-                <p>Máquina a vapor (década de 1760)</p>
+
+            <div class="flashcard">
+                <div class="question">
+                    <p>Quando começou a Era Digital?</p>
+                </div>
+                <button class="reveal-btn" onclick="toggleAnswer(this)">Revelar Resposta</button>
+                <div class="answer">
+                    <p>Por volta da década de 1970</p>
+                </div>
             </div>
         </div>
     </div>
